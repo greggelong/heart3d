@@ -9,8 +9,11 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   pixelDensity(1);
+
+  fill(255);
   textFont(font);
-  textSize(32);
+  textSize(400);
+  textStyle(BOLD);
   textAlign(CENTER, CENTER);
 }
 
@@ -32,13 +35,9 @@ function draw() {
 
   // Scrolling 3D Text
   push();
-  fill(255);
-  textFont(font);
-  textSize(400);
-  textStyle(BOLD);
 
-  let txt = "艺术工人  520 Art Workers 520";
-  let textW = textWidth(txt);
+  let txt = "艺术工人  520 Art Workers 520             ";
+  let textW = textWidth(txt) / 2.5;
 
   // Total scroll distance: from (width + textW) ➝ -textW
   let totalScroll = width + textW * 2;
