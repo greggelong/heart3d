@@ -2,7 +2,7 @@ let model3D;
 let font;
 
 function preload() {
-  model3D = loadModel("assets/model.obj", true);
+  model3D = loadModel("assets/heartChain.obj", true);
   font = loadFont("assets/NotoSansSC-VariableFont_wght.ttf"); // your .ttf file here
 }
 
@@ -23,9 +23,10 @@ function draw() {
   // Spinning 3D model
   push();
   scale(3);
+  rotate(PI);
   rotateY(millis() / 1000);
-  rotateX(millis() / 1000);
-  rotateZ(millis() / 1000);
+  // rotateX(millis() / 1000);
+  //rotateZ(millis() / 1000);
   ambientLight(255);
   directionalLight(255, 255, 255, 0.5, 1, 0);
   ambientMaterial(255, 0, 0);
